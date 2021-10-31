@@ -1,0 +1,17 @@
+extends base
+
+
+block content
+    main.main
+        .login-form
+            h2.heading-secondary.ma-bt-lg Create review
+            form.form(method='POST', action=`/me/create-review/${bookingId}`)
+                .form__group
+                    label.form__label(for='text') Content
+                    input.form__input(type='text', placeholder='Tour is very nice', required, name='review')
+                .form__group
+                    label.form__label(for='text') Rating
+                    input.form__input(type='number', step="any", placeholder='4', required, name='rating' max='5' min ='4')
+               
+                .form__group
+                    button.btn.btn--green(type='submit') Review   

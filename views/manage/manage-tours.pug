@@ -1,0 +1,23 @@
+extends ../base
+
+
+block content
+    main.main
+        .card-container
+            each tour in tours
+                .card
+                    .card__header
+                        .card__picture
+                            .card__picture-overlay &nbsp;
+                            img.card__picture-img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.name}`)
+                        h3.heading-tertirary
+                            span= tour.name
+                    .card__footer
+                        p
+                            span.card__footer-text='Created At: '
+                            span.card__footer-value=`${tour.createdAt.toString().slice(0,24)}`
+                        p.card__ratings
+                            a.btn.btn--edit.btn--small(href=`/admin/edit-tour/${tour.slug}`) Edit
+                            a.btn.btn--delete.btn--small(href=`/admin/delete-tour/${tour.id}`) Delete
+                        
+                        

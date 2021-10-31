@@ -1,0 +1,31 @@
+extends ../base
+
+
+block content
+    main.main
+        .card-container
+            each booking in bookings
+                .card
+                    .card__header
+                        .card__picture
+                            .card__picture-overlay &nbsp;
+                            img.card__picture-img(src=`/img/tours/${booking.tour.imageCover}`)
+                        h3.heading-tertirary
+                            span= booking.tour.name
+                    .card__footer
+                        p
+                            span.card__footer-text= 'Created At: '
+                            span.card__footer-value=`${booking.createdAt.toString().slice(0,24)}` 
+                            br 
+                            span.card__footer-text= 'User name: '
+                            span.card__footer-value=`${booking.user.name}`
+                            br
+                            span.card__footer-text= 'Status: '
+                            if booking.status
+                                span.card__footer-value Completed
+                            else 
+                                span.card__footer-value Processing
+                                p.card__ratings    
+                                    a.btn.btn--edit.btn--small(href=`/admin/confirm-bookings/${booking.id}`) Accept
+                                    a.btn.btn--delete.btn--small(href=`/admin/delete-bookings/${booking.id}`) Cancel
+                        

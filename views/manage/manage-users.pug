@@ -1,0 +1,25 @@
+extends ../base
+
+
+block content
+    main.main
+        .card-container
+            each user in users
+                .card
+                    .card__header
+                        .card__user
+                            .card__picture-overlay &nbsp;
+                            img.user-photo(src=`/img/users/${user.photo}`, alt='User photo')  
+                            p.info
+                                br
+                                span.card__footer-value= 'Name:  '
+                                span.card__footer-value= user.name
+                                br
+                                span.card__footer-value= 'Email:  '
+                                span.card__footer-value= user.email
+                            
+                    .card__footer
+                        a.btn.btn--delete.btn--small(href=`/admin/delete-user/${user.id}`) Delete
+                        
+                        
+                        

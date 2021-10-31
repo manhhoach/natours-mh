@@ -1,0 +1,61 @@
+extends base
+
+
+
+block content 
+    main.main   
+         
+        .container
+            a(href='/?sort=desc') 
+                img.img-down(src='/img/arrowDown.png')
+            a(href='/?sort=asc') 
+                img.img-up(src='/img/arrowUp.png')
+
+        .card-container
+            each tour in tours
+                .card
+                    .card__header
+                        .card__picture
+                            .card__picture-overlay &nbsp;
+                            img.card__picture-img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.name}`)
+                        h3.heading-tertirary
+                            a.tour-name(href=`/tour/${tour.slug}`) 
+                                span= tour.name
+
+                    .card__details
+                        h4.card__sub-heading= `${tour.difficulty} ${tour.duration}-days tour`
+                        p.card__text= tour.sumary
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='/img/icons.svg#icon-map-pin')
+                            span= `${tour.destination}`
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='/img/icons.svg#icon-calendar')
+                            span= tour.startDate.toLocaleString('en-us', {month: 'long', year: 'numeric'})
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='/img/icons.svg#icon-user')
+                            span= `${tour.maxGroupSize} people`
+
+                    .card__footer
+                        p
+                            span.card__footer-value= `$${tour.price} `
+                            span.card__footer-text per person
+                        p.card__ratings
+                            span.card__footer-value= `${tour.ratingsAverage} `
+                            span.card__footer-text= `rating (${tour.ratingsQuantity})`
+                        a.btn.btn--green.btn--small(href=`/tour/${tour.slug}`) Details
+        
+        .line &nbsp;
+
+        nav.nav-pagination
+            ul.pagination
+                li.page-item    
+                    if (page<2)
+                        a.btn.btn-pagination(href=`#`) Prev
+                    else
+                        a.btn.btn-pagination(href=`/?page=${parseInt(page)-1}`) Prev
+                li.page-item   
+                        a.btn.btn-pagination(href=`/?page=${parseInt(page)+1}`) Next
+                

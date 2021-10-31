@@ -1,0 +1,54 @@
+extends ../base
+
+
+block content
+    main.main
+        .user-view__form-container
+          h2.heading-secondary.ma-bt-md Create the new tour
+          form.form.form-user-data(method='POST', action=`/admin/create-tour`, enctype='multipart/form-data')
+
+            .form__group
+              label.form__label(for='name') Tour name
+              input.form__input(type='text', required, name='name')
+
+            .form__group.ma-bt-md
+              label.form__label Destination
+              input.form__input(type='text', required, name='destination')    
+
+            .form__group.ma-bt-md
+              label.form__label Duration
+              input.form__input(type='number', required, name='duration')
+
+            .form__group.ma-bt-md
+              label.form__label Max group size
+              input.form__input(type='number', required, name='maxGroupSize')
+
+            .form__group.ma-bt-md
+              label.form__label Difficulty
+              input.form__input(type='text', required, name='difficulty')
+
+            .form__group.ma-bt-md
+              label.form__label Ratings Average
+              input.form__input(type='text', required, name='ratingsAverage')
+
+            .form__group.ma-bt-md
+              label.form__label Ratings Quantity
+              input.form__input(type='text', required, name='ratingsQuantity')
+
+            .form__group.ma-bt-md
+              label.form__label Price
+              input.form__input(type='text',required, name='price')    
+
+            .form__group.ma-bt-md
+              label.form__label Description
+              textarea(cols='68', rows='15', type='text', required, name='description')
+            
+            .form__group.form__photo-upload
+              input.form__upload(type='file',multiple='', accept='image/*',id='photo', name='images')
+              label(for='photo') Choose 4 images( first image is image cover)
+
+            .form__group.right
+              button.btn.btn--small.btn--green Create
+
+        .line &nbsp;
+

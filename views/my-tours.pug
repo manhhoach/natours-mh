@@ -1,0 +1,32 @@
+extends base
+
+
+block content 
+    main.main   
+        .card-container
+            each booking in bookings
+                .card
+                    .card__header
+                        .card__picture
+                            .card__picture-overlay &nbsp;
+                            img.card__picture-img(src=`/img/tours/${booking.tour.imageCover}`)
+                        h3.heading-tertirary
+                            span= booking.tour.name
+
+                    .card__footer
+                        p
+                            span.card__footer-value= `$${booking.price} `
+                            span.card__footer-text per person
+                        p.card__ratings                      
+                            if booking.status                             
+                                if booking.isReview
+                                    span.card__footer-value= 'Thank you for your review'
+                                else    
+                                    span.card__footer-value= 'Click on REVIEW to write about tourism'
+                                    a.btn.btn--green.btn--small(href=`/me/create-review/${booking.id}`) Review
+                            else
+                                span.card__footer-value Waiting for admin approval
+                                br
+                                a.btn.btn--delete.btn--small(href=`/me/delete-booking/${booking.id}`) Delete
+
+

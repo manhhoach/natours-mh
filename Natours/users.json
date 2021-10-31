@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "5c8a1d5b0190b214360dc057"
+  },
+  "name": "Jonas Schmedtmann",
+  "email": "admin@natours.io",
+  "photo": "user-1.jpg",
+  "password": "$2a$12$vU.6NG.WGSg5c9Rr8Lvg9uHQM8e61l3vsyB9JunedxRUEy91vg80a",
+  "role": "admin",
+  "active": true,
+  "__v": 0,
+  "isApproval": false
+},{
+  "_id": {
+    "$oid": "61760c73982173084eb8b4cb"
+  },
+  "name": "Mạnh Hoạch",
+  "email": "manh@gmail.com",
+  "photo": "user-61760c73982173084eb8b4cb.jpeg",
+  "password": "$2a$12$c8jg/vKIyVthEZPEtGWZIO.tOQDMfY3ljFxeaPEWaWuc0h1vb/wly",
+  "role": "admin",
+  "active": true,
+  "__v": 0,
+  "passwordChangedAt": {
+    "$date": "2021-10-29T04:07:14.729Z"
+  },
+  "isApproval": false
+},{
+  "_id": {
+    "$oid": "617e627794364aa61e610832"
+  },
+  "name": "Kẻ bất dung thứ",
+  "email": "yasuo@gmail.com",
+  "photo": "user-617e627794364aa61e610832.jpeg",
+  "password": "$2a$12$pr.RTrjOMaBUrt9rKHfL/uy05/uKuD08rBPRYPIANAJ23yQyyvpSi",
+  "role": "guide",
+  "active": true,
+  "isApproval": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617e8e6bd0bb52a2d2d2203e"
+  },
+  "name": "Yone Hoa Linh",
+  "email": "yone@gmail.com",
+  "photo": "user-617e8e6bd0bb52a2d2d2203e.jpeg",
+  "password": "$2a$12$uwwo1yOjIOMt0ymt3DvecOI.5SC0MUcy8S2znldzKLgQE8f9YDIvq",
+  "role": "guide",
+  "active": true,
+  "isApproval": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617e8fa4d0bb52a2d2d2204f"
+  },
+  "name": "Chúa tể bóng tối",
+  "email": "zed@gmail.com",
+  "photo": "user-617e8fa4d0bb52a2d2d2204f.jpeg",
+  "password": "$2a$12$h076EBVvT6mwXUQ8C9tysuSUKtJZ0W1FkwZgwfjS9jM.3p8slLIl2",
+  "role": "guide",
+  "active": true,
+  "isApproval": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617e8fdcd0bb52a2d2d22060"
+  },
+  "name": "Kiếm sư Wuju",
+  "email": "yi@gmail.com",
+  "photo": "user-617e8fdcd0bb52a2d2d22060.jpeg",
+  "password": "$2a$12$.hKMhYyc6Y0WklazHa8e1.HH6edYCpGxlHuHDwzBGxNbzN6FQrtT2",
+  "role": "lead-guide",
+  "active": true,
+  "isApproval": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617e900dd0bb52a2d2d22071"
+  },
+  "name": "Phế long thượng giới",
+  "email": "aure@gmail.com",
+  "photo": "user-617e900dd0bb52a2d2d22071.jpeg",
+  "password": "$2a$12$LGVWbzKboLlOjmPejiXhK.gEJhOxOrBu5KvAIN1xljB2W2mbFNh.W",
+  "role": "lead-guide",
+  "active": true,
+  "isApproval": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "617e9a0dcde61ac98d9c76a5"
+  },
+  "name": "Người được chọn",
+  "email": "test@gmail.com",
+  "photo": "default.jpg",
+  "password": "$2a$12$mVi8DnT2JlEDbZSN38iMLea2dQ5.v0nDm3XIbUYRvxE2VgILMM1NS",
+  "role": "user",
+  "active": true,
+  "isApproval": true,
+  "__v": 0
+}]
